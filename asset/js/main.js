@@ -128,7 +128,7 @@ function nav_set() {
       $("nav").hide();
     }
     $(window).scrollTop(0);
-    url = 'https://people.cs.nctu.edu.tw/~hkwu0313/final/post';
+    url = 'https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post';
     $.ajax({
       url: url,
       type: "get",
