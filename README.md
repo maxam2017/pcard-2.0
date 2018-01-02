@@ -8,7 +8,7 @@
 | **backend**| php||
 |  **using api** |   YES   |https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post|
 | **frontend**|JavaScript+AJAX|mostly CSS [< form > style using bootstrap 4]|
-
+---
 |**Filename**|**Useage**|
 | - | - |
 | **_head.php** | html < head > |
@@ -19,5 +19,6 @@
 | **login.php** | sign in |
 | **index.php** | homepage |
 | **footer.php** | footer |
+---
 ### reference
 * http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
