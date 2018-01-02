@@ -2,7 +2,7 @@
     require_once 'db_config.php';
     header('Content-type:application/json;charset=utf-8'); 
 if($_SERVER['REQUEST_METHOD']=='GET'){
-        if($_SERVER['REQUEST_URI']=='/~hkwu0313/final/post'){
+        if($_SERVER['REQUEST_URI']=='/~hkwu0313/pcard/post'){
           $sql = 'select * from post order by id desc';
         }
         else{
