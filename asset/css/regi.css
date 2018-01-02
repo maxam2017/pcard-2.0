@@ -1,0 +1,8 @@
+#container2 {
+    display: inline-block;
+    margin: calc(50px + 2%) 0 15% 18%;
+    width: 70%;
+}
+*{
+    color: white;
+}

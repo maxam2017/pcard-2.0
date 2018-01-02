@@ -1,0 +1,23 @@
+@media only screen and (min-width: 992px) {
+    #result {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #result {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #result {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #result {
+        grid-template-columns: 1fr;
+    }
+}
