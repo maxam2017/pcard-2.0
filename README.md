@@ -1,6 +1,8 @@
 # pcard-2.0
-> PPT : https://hackmd.io/p/rJ3gX-3mz#/
+* PPT : https://hackmd.io/p/rJ3gX-3mz#/
 * this website is published at https://people.cs.nctu.edu.tw/~hkwu0313/pcard/
+
+![](https://github.com/maxam2017/pcard-2.0/blob/master/asset/img/readme.gif)
 
 |**ITEM**|**Implementation**|**Detail**|
 | - | - |-|
