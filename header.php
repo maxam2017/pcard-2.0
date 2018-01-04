@@ -1,5 +1,5 @@
 <header>
-        <a href="https://people.cs.nctu.edu.tw/~hkwu0313/final/">
+        <a href="https://people.cs.nctu.edu.tw/~hkwu0313/pcard/">
            <div id="logo-container">
             <img src="asset/img/logo.png" width="85%" id="logo">
             </div>
@@ -16,8 +16,9 @@
         <div id="user">
 <?php
 if($user->is_loggedin()!=""){
+  if($user->fb_connect)echo "hi";
 ?>
-  <a href="create" class="link" id="create">新增留言</a>
+  <a href="create" class="link" id="create">管理留言</a>
   <a href="index.php?logout" class="link" id="logout">登出</a>
 <?php
 }

@@ -1,6 +1,7 @@
 <?php
 require('_head.php');
 if(isset($_GET['logout'])){
+  
   $user->logout();
 }
 ?>
@@ -13,6 +14,6 @@ if(isset($_GET['logout'])){
         <div id="result"></div>
     </div>
     <div id="top"><img src="asset/img/icon/top.svg"></div>
-    <footer>Copyright &copy; 2017 MAXAM - all rights reserved -</footer>
+<?php require('footer.php');?>
     <script src="asset/js/main.js"></script>
 </body>

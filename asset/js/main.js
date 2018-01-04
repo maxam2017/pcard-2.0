@@ -128,25 +128,26 @@ function nav_set() {
       $("nav").hide();
     }
     $(window).scrollTop(0);
-    url = 'https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post';
-    $.ajax({
-      url: url,
-      type: "get",
-      error: function () {
-        $('#result').empty();
-        $('#result').append("<p id='error'>ERROR 404</p>");
-      },
-      success: function (e) {
-        $('#result').empty();
-        for (i = 0; i < e.length; i++) {
-          var date = dat(e[i].createdAt,false);
-          $("#result").append("<div class='card' id='" + e[i].id + "' ><div class='title'>" + e[i].title + "</div>" + "<div class='content'>" + pack(e[i].content) + "<span style='font-size:14px;position:absolute;right:3px;bottom:0;'><i>" + date + "</i></span></div>");
-        }
-      }
-    });
+    pcard('https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post');
   });
 }
-
+function pcard(url){
+  $.ajax({
+    url: url,
+    type: "get",
+    error: function () {
+      $('#result').empty();
+      $('#result').append("<p id='error'>ERROR 404</p>");
+    },
+    success: function (e) {
+      $('#result').empty();
+      for (i = 0; i < e.length; i++) {
+        var date = dat(e[i].createdAt,false);
+        $("#result").append("<div class='card' id='" + e[i].id + "' ><div class='title'>" + e[i].title + "</div>" + "<div class='content'>" + pack(e[i].content) + "<span style='font-size:14px;position:absolute;right:3px;bottom:0;'><i>" + date + "</i></span></div>");
+      }
+    }
+  });
+}
 function setting() {
   header_set();
   nav_set();
@@ -433,7 +434,7 @@ $(function () {
   setting();
   addforum();
   //defalut data
-  getForum(url);
+  pcard('https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post');//getForum(url);
   /*
     //auto renew
     $(window).scroll(function () {

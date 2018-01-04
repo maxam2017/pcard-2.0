@@ -5,6 +5,7 @@ class USER
   function __construct($DB_con){
     $this->db = $DB_con;
   }
+  public $fb_connect = false;
   public function register($username,$passwd,$nickname,$email,$school,$gender){
     try{
       $new_password = password_hash($passwd, PASSWORD_DEFAULT);

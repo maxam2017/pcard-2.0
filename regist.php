@@ -1,11 +1,11 @@
 <?php
+$tag = false;
 require_once 'db_config.php';
-require '_head.php';
+require_once '_head.php';
 if($user->is_loggedin()!="")
 {
     $user->redirect('index.php');
 }
-
 if(isset($_POST['submit'])){
    $username = trim($_POST['username']);
    $passwd = trim($_POST['passwd']);
@@ -44,7 +44,8 @@ if(isset($_POST['submit'])){
          }
          else{
             if($user->register($username,$passwd,$name,$email,$school,$gender)) {
-                $user->redirect('regist.php?joined');
+//                $user->redirect('regist.php?joined');
+                  $tag = true;
             }
          }
      }
@@ -53,7 +54,6 @@ if(isset($_POST['submit'])){
      }
   } 
 }
-
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
 <link href="asset/css/regi.css" rel="stylesheet">
 </head>
 <body>
-<?php require 'header.php';?>
+<?php require_once 'header.php';?>
     <div id="container2">
 <?php
 if(isset($error)){
@@ -76,7 +76,7 @@ if(isset($error)){
       <?php
    }
 }
-else if(isset($_GET['joined'])){
+if($tag == true){
      ?>
     <div class="alert alert-success alert-dismissible fade show " >
         <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="height:100%;">
