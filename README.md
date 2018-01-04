@@ -1,5 +1,5 @@
 # pcard-2.0
->JavaScript final project
+> PPT : https://hackmd.io/p/rJ3gX-3mz#/
 * this website is published at https://people.cs.nctu.edu.tw/~hkwu0313/pcard/
 
 |**ITEM**|**Implementation**|**Detail**|
