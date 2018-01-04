@@ -37,13 +37,13 @@ if(isset($_GET['upd'])){
   <div class="form-group row ">
     <label class="col-sm-2 col-form-label">標題</label>
     <div class="col-sm-10">
-    <input  class="form-control" name="title" placeholder="Title" value="<?php echo !empty($title)?$title:'';?>" required>
+    <input  class="form-control" maxlength="20" name="title" placeholder="Title" value="<?php echo !empty($title)?$title:'';?>" required>
     </div>
   </div>
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">內容</label>
     <div class="col-sm-10">
-        <textarea class="form-control" name="content" placeholder="最多輸入8000字"rows="8" required><?php echo !empty($content)?$content:'';?>
+        <textarea class="form-control" name="content" maxlength="1000" placeholder="最多輸入1000字"rows="8" required><?php echo !empty($content)?$content:'';?>
 </textarea>
     </div>
   </div>
@@ -58,7 +58,7 @@ if(isset($_GET['upd'])){
   </div>
   <div class="form-group row">
     <div class="col-sm-12">
-      <a class="btn btn-secondary" href="index.php">返回</a>
+      <a class="btn btn-secondary" href="create.php">返回</a>
       <button type="submit" name="upd" value="<?php echo $id;?>" class="btn btn-primary mx-2">更新貼文</button>
     </div>
   </div>

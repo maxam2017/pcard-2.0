@@ -143,7 +143,7 @@ function pcard(url){
       $('#result').empty();
       for (i = 0; i < e.length; i++) {
         var date = dat(e[i].createdAt,false);
-        $("#result").append("<div class='card' id='" + e[i].id + "' ><div class='title'>" + e[i].title + "</div>" + "<div class='content'>" + pack(e[i].content) + "<span style='font-size:14px;position:absolute;right:3px;bottom:0;'><i>" + date + "</i></span></div>");
+        $("#result").append("<div class='card' id='" + e[i].id + "' ><div class='title'>" + e[i].title + "</div>" + "<div class='content'><p style='word-wrap:break-word;'>" + pack(e[i].content) + "</p><span style='font-size:14px;position:absolute;right:3px;bottom:0;'><i>" + date + "</i></span></div>");
       }
     }
   });

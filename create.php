@@ -57,12 +57,12 @@ if(isset($_POST['submit'])){
 ?>
                                                          <fieldset><legend><h3>管理留言</h3></legend></fieldset>
                                                          <hr>
-                                                         <table class="table table-dark table-striped text-center my-4">
+                                                         <table class="table table-dark table-striped text-center table-hover my-4">
                                                            <tbody>
                                                              <tr>
                                                                <th>編號</th>
                                                                <th>標題</th>
-                                                               <th>內容</th>
+                                                              <th>內容</th> 
                                                                <th>管理</th>
                                                              </tr>
 <?php
@@ -74,7 +74,7 @@ foreach ($q as $row) {
   echo '<tr>';
   echo '<td>'.$t.'</td>';
   echo '<td>'. htmlspecialchars($row['title'],ENT_QUOTES, 'UTF-8') . '</td>';
-  echo '<td>'. htmlspecialchars($row['content'],ENT_QUOTES, 'UTF-8') . '</td>';
+  echo '<td>'. htmlspecialchars(substr($row['content'],0,20).'...',ENT_QUOTES, 'UTF-8') . '</td>';
   echo '<td>';
   echo '<a class="btn btn-success mx-2"  href="update.php?upd=true&id='.$row['id'].'">修改</a> ';
   echo '<a class="btn btn-danger mx-2"  href="create.php?del=true&id='.$row['id']. '">刪除</a> ';
@@ -91,13 +91,13 @@ foreach ($q as $row) {
                                                            <div class="form-group row ">
                                                              <label class="col-sm-2 col-form-label">標題</label>
                                                              <div class="col-sm-10">
-                                                               <input  class="form-control" name="title" placeholder="Title" required>
+                                                               <input  class="form-control" name="title" maxlength="10" placeholder="Title" required>
                                                              </div>
                                                            </div>
                                                            <div class="form-group row">
                                                              <label class="col-sm-2 col-form-label">內容</label>
                                                              <div class="col-sm-10">
-                                                               <textarea class="form-control" name="content" placeholder="最多輸入8000字" rows="8" required></textarea>
+                                                               <textarea class="form-control" maxlength="1000" name="content" placeholder="最多輸入1000字" rows="8" required></textarea>
                                                              </div>
                                                            </div>
                                                            <div class="form-group row">
