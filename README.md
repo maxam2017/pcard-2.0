@@ -5,8 +5,8 @@
 ![](https://github.com/maxam2017/pcard-2.0/blob/master/asset/img/readme.gif)
 
 |**ITEM**|**Implementation**|**Detail**|
-| - | - |-|
-| **database** | mysql | |
+|:-:|:-:|:-:|
+| **database** | mysql |https://www.cs.nctu.edu.tw/cscc/mysql/|
 | **backend**| php||
 |  **using api** |   YES   |https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post|
 | **frontend**|JavaScript+AJAX|mostly CSS [< form > style using bootstrap 4]|
