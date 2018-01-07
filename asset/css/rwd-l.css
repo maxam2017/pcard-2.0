@@ -68,14 +68,9 @@
         margin: 0 auto;
         display: grid;
         grid-gap: 0px 30px;
-
+        /*grid-auto-rows: minmax(50px,auto);*/
     }
     .card {
-        -webkit-break-inside: avoid;
-        -moz-break-inside: avoid;
-        -ms-break-inside: avoid;
-        -o-break-inside: avoid;
-        break-inside: avoid;
         margin-bottom: 10%;
     }
     #top {
