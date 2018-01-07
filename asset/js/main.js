@@ -59,7 +59,8 @@ function header_set() {
     }
     $("#result").empty();
     url = post + "?popular=true";
-    getForum(url);
+    //getForum(url);
+    //pcard('https://people.cs.nctu.edu.tw/~hkwu0313/pcard/post');
   })
   //hambuger button
   $("#ham").click(function () {
